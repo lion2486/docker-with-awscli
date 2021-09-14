@@ -22,7 +22,8 @@ jobs:
       # uses: stijnvdkolk/githubpackages-docker@c64052692090e8cee503258fb0474f2fdd291926
       uses: stijnvdkolk/githubpackages-docker@v1.0.4
       with:
-        # Access token which is used to deploy the image to the repository. I advise to use GITHUB_TOKEN
-        repo-token: $GITHUB_TOKEN
-        # Name for the docker image
-        image-name: docker-with-awscli
+        name: lion2486/docker-with-awscli/docker-with-awscli
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+        registry: ghcr.io
+       
